@@ -2,7 +2,8 @@ import React from 'react';
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { fetchAllPosts } from "../actions/index";
-import { Link } from 'react-router-dom';
+
+import PostCard from './../components/postCard';
 
 class Home extends React.Component{
 
@@ -12,10 +13,7 @@ class Home extends React.Component{
 
     renderPosts(posts){
         const data =posts.length > 0 ? posts[0]:[];
-        return data.map((post)=>(
-                <Link to={`/post/${post.id}`}key={`${post.id}-${post.userId}`}>{post.title}</Link>
-            )
-        )
+        return data.map((post)=><PostCard key={post.id} item={post} />)
     }
 
     render(){
