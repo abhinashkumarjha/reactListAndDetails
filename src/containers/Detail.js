@@ -7,8 +7,8 @@ import { Link, useParams } from 'react-router-dom';
 const Details = (props) =>{
     const { id } = useParams()
     useEffect(() => {
-        console.log('  i was here ')
-        props.fetchPost(10);
+        console.log('  i was here ', props, id);
+        props.fetchPost(id);
     });
 
     return(
