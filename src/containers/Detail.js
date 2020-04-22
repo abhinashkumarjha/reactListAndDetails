@@ -1,7 +1,7 @@
 import React from 'react';
 
-export default () =>{
-    return(
-        <div>This is home page</div>
-    )
+class Details extends React.Component{
+    render(){
+        return<div>This is the details page</div>
+    }
 }

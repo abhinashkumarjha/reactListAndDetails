@@ -13,7 +13,7 @@ class Home extends React.Component{
 
     renderPosts(posts){
         const data =posts.length > 0 ? posts[0]:[];
-        return data.map((post)=><PostCard key={post.id} item={post} />)
+        return data.map((post)=><PostCard key={post.id} post={post} />)
     }
 
     render(){
