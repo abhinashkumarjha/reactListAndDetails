@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { fetchPost } from "../actions/index";
 
 const Details = (props) =>{
     console.log(props);
+    useEffect(() => {
+        fetchPost(10);
+    });
+
     return(
         <div>
             This is the details page
