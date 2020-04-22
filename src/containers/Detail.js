@@ -2,11 +2,13 @@ import React, { useEffect } from 'react';
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { fetchPost } from "../actions/index";
+import { Link, useParams } from 'react-router-dom';
 
 const Details = (props) =>{
-    console.log(props);
+    const { id } = useParams()
     useEffect(() => {
-        fetchPost(10);
+        console.log('  i was here ')
+        props.fetchPost(10);
     });
 
     return(
