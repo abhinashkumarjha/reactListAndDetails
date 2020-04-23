@@ -1,5 +1,5 @@
 import axios from "axios";
-
+// the base url
 const ROOT_URL = `https://jsonplaceholder.typicode.com`;
 
 // all the action creators.
@@ -19,7 +19,8 @@ export function fetchAllPosts() {
 }
 
 export function fetchPost(id) {
-    const url = `${ROOT_URL}/posts/${id}`;
+    console.warn(`APP REQUEST WARNING - jsonplaceholder really donot have any other post other than 1. So converting the id to 1 instead of`,{id})
+    const url = `${ROOT_URL}/posts/1`;
     const request = axios.get(url);
     return {
       type: FETCH_A_POST,
